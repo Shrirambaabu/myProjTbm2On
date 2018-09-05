@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:padding="@dimen/margin_8"
+        card_view:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/notifyNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.conext.conext.ui.custom.HexagonMaskView
+                android:id="@+id/contact_notify"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8" />
+
+            <ImageView
+                android:id="@+id/tic_contact_selected"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="52dp"
+                android:src="@drawable/mentor_dp" />
+
+            <TextView
+                android:id="@+id/notify_name"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@id/contact_notify"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/notify_time"
+                android:layout_width="76dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@id/notify_name"
+                android:textColor="@color/notify_time"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/wants_mentor"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_below="@id/notify_name"
+                android:layout_marginStart="@dimen/margin_8"
+                android:maxLines="2"
+                android:layout_toEndOf="@+id/contact_notify"
+                android:textColor="@color/wants_mentor"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_notify"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/contact_notify"
+                android:layout_marginTop="@dimen/margin_4"
+                android:background="@color/notify_view" />
+
+
+            <RelativeLayout
+                android:id="@+id/longPress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_notify"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/clear_notify"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/decline" />
+
+                <TextView
+                    android:id="@+id/decline_notify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@id/clear_notify"
+                    android:text="Decline"
+                    android:textAllCaps="true"
+                    android:textColor="@color/decline_accept"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/vertical_view"
+                    android:layout_width="2dp"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/decline_notify"
+                    android:background="@color/notify_view" />
+
+                <ImageView
+                    android:id="@+id/done_notify"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@+id/vertical_view"
+                    android:src="@drawable/done" />
+
+                <TextView
+                    android:id="@+id/accept_notify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@+id/done_notify"
+                    android:text="Answer"
+                    android:textAllCaps="true"
+                    android:textColor="@color/decline_accept"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

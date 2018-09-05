@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_card"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="208dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/bac"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/my_event_other_more"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:src="@drawable/ic_more_vert_black_24dp" />
+
+            <ImageView
+                android:id="@+id/my_share_more"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_toLeftOf="@+id/my_event_other_more"
+                android:padding="2dp"
+                android:src="@drawable/ic_share_black_24dp" />
+
+            <RelativeLayout
+                android:id="@+id/topRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:alpha=".7"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.7"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/event_name"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/event_type"
+                    android:layout_width="248dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/event_name"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:ellipsize="marquee"
+                    android:gravity="center|start"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/event_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/event_type"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/event_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/event_date"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_toRightOf="@id/event_type"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/event_other_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top"
+            android:background="@color/my_view_des"
+            android:maxLines="3"
+            android:padding="8dp"
+            android:paddingStart="16dp"
+            android:textColor="@color/mentor_in"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/optionLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/event_other_des"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/interest_event_more_yes"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Yes"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/interest_more_interest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="2"
+                android:background="@drawable/text_border"
+                android:gravity="center"
+                android:text="Tentative"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/interest_event_more_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="No"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/lineView"
+            android:layout_width="340dp"
+            android:layout_height="2dp"
+            android:layout_below="@+id/optionLinearLayout"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/view_my_view" />
+
+        <ImageView
+            android:id="@+id/alrm_img_event_more"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/lineView"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_more_alarm_24dp" />
+
+        <TextView
+            android:id="@+id/event_more_when_happen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lineView"
+            android:layout_marginEnd="16dp"
+            android:layout_toRightOf="@id/alrm_img_event_more"
+            android:text="When does it happen:"
+            android:textColor="@color/when_happen"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/event_more_time_notify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/event_more_when_happen"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_toRightOf="@id/alrm_img_event_more"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/locate_more_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/event_more_time_notify"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_marker_24dp" />
+
+        <TextView
+            android:id="@+id/event_more_where_happen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/event_more_time_notify"
+            android:layout_marginEnd="16dp"
+            android:layout_toRightOf="@+id/locate_more_image"
+            android:text="Where it is happening:"
+            android:textColor="@color/when_happen"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/event_more_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/locate_more_image"
+            android:layout_marginEnd="16dp"
+            android:layout_toRightOf="@+id/locate_more_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/event_more_place2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/event_more_place"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginEnd="16dp"
+            android:layout_toRightOf="@+id/locate_more_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/hex_one_event_more"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/event_more_place2"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:src="@drawable/person_orange" />
+
+
+        <TextView
+            android:id="@+id/people_attending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/event_more_place2"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/hex_one_event_more"
+            android:text="People Attending"
+            android:textColor="@color/when_happen"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/recyclerAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/people_attending"
+            android:layout_margin="16dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/contact_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="52dp"/>
+
+            <com.conext.conext.ui.custom.HexagonMaskView
+                android:id="@+id/add_contact"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/hex_src_plus_color"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

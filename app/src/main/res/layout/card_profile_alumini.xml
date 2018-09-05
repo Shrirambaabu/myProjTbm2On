@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardUseCompatPadding="true"
+    app:elevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/alumini_profile_colg_logo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="@dimen/margin_4"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/book"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:textColor="@color/alumini_color"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:layout_toEndOf="@+id/alumini_profile_colg_logo"
+            android:id="@+id/alumini_profile_colg_title" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/study"
+            android:padding="@dimen/margin_4"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_below="@+id/alumini_profile_colg_title"
+            android:id="@+id/alumini_profile_deg_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:textColor="@color/alumini_color"
+            android:maxLines="1"
+            android:paddingTop="@dimen/margin_4"
+            android:textSize="14sp"
+            android:layout_below="@+id/alumini_profile_colg_title"
+            android:layout_toEndOf="@+id/alumini_profile_deg_logo"
+            android:id="@+id/alumini_profile_deg_title" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="@dimen/margin_4"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_8"
+            android:src="@drawable/study"
+            android:layout_below="@+id/alumini_profile_deg_title"
+            android:id="@+id/alumini_profile_year_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:textColor="@color/alumini_color"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:paddingTop="@dimen/margin_4"
+            android:layout_below="@+id/alumini_profile_deg_title"
+            android:layout_toEndOf="@+id/alumini_profile_year_logo"
+            android:id="@+id/alumini_profile_year_title" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_card"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:contentInsetStartWithNavigation="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                app:theme="@style/AppToolbar" />
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/head_event"
+            android:layout_width="wrap_content"
+            android:layout_height="256dp"
+            android:background="@drawable/event_bg">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/margin_16"
+                android:text="Cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/margin_16"
+                android:text="Save"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/take_pic"
+                android:layout_width="48dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:src="@drawable/ic_camera_24dp" />
+
+
+            <LinearLayout
+                android:id="@+id/what_called_linear"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_above="@+id/what_event"
+                android:layout_alignStart="@+id/what_event"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/edit_text_underline_trans">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/edit_event" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/what_called"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/no_border"
+                    android:drawablePadding="@dimen/margin_8"
+                    android:hint="What is called?"
+                    android:maxLength="24"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/event_hint"
+                    android:textSize="20sp"
+                    app:paddingEnd="4dp"
+                    app:paddingStart="4dp" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/what_event"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="12dp"
+                android:hint="What kind of event is this?"
+                android:textColorHint="@color/event_hint"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:backgroundTint="@color/white" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/tag_event"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:hint="Tag your event"
+            android:textColorHint="@color/event_hint"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:backgroundTint="@color/white" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/descripText"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@drawable/shape"
+            android:gravity="top|left"
+            android:hint="@string/desc_create_event"
+            android:inputType="textMultiLine"
+            android:maxLength="400"
+            android:padding="@dimen/margin_4"
+            android:scrollbars="vertical"
+            android:textColor="@color/white"
+            android:textColorHint="@color/description"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/start_text"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="When does it start?"
+            android:textColor="@color/start_it" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/date_picked_start_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/edit_text_underline">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="@dimen/margin_8"
+                    android:src="@drawable/date_pick" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/date_picked_start"
+                    android:layout_width="160dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/no_border"
+                    android:enabled="true"
+                    android:focusable="false"
+                    android:paddingStart="4dp"
+                    android:paddingTop="@dimen/margin_16"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/white" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/time_pick_start"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="4dp"
+                android:layout_marginStart="@dimen/margin_4"
+                android:layout_toEndOf="@+id/date_picked_start_linear"
+                android:src="@drawable/event_time" />
+
+            <LinearLayout
+                android:id="@+id/time_start_hours_linear"
+                android:layout_width="36dp"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:layout_alignTop="@+id/time_pick_start"
+                android:layout_toEndOf="@+id/time_pick_start"
+                android:background="@drawable/edit_text_underline">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/time_start_hours"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/no_border"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/colon_start"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/margin_4"
+                android:layout_marginTop="24dp"
+                android:layout_toEndOf="@+id/time_start_hours_linear"
+                android:text=":"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/time_start_hours_linear2"
+                android:layout_width="36dp"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/colon_start"
+                android:clickable="true"
+                android:background="@drawable/edit_text_underline">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/time_start_min"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/no_border"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/start_session"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/time_start_hours_linear"
+                android:layout_marginTop="24dp"
+                android:layout_toEndOf="@+id/time_start_hours_linear2"
+                android:gravity="center"
+                android:text="AM"
+                android:textColor="@color/am"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/end_text"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="When does it end?"
+            android:textColor="@color/start_it" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/date_picked_start_linear2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/edit_text_underline">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="@dimen/margin_8"
+                    android:src="@drawable/date_pick" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/date_picked_end"
+                    android:layout_width="160dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/no_border"
+                    android:enabled="true"
+                    android:focusable="false"
+                    android:paddingStart="4dp"
+                    android:paddingTop="@dimen/margin_16"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/white" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/time_pick_end"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="4dp"
+                android:layout_toEndOf="@+id/date_picked_start_linear2"
+                android:src="@drawable/event_time" />
+
+            <LinearLayout
+                android:id="@+id/time_start_hours_linear3"
+                android:layout_width="36dp"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:layout_alignTop="@+id/time_pick_end"
+                android:layout_toEndOf="@+id/time_pick_end"
+                android:background="@drawable/edit_text_underline">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/time_end_hours"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/no_border"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/colon_end"
+                android:layout_width="10dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/margin_4"
+                android:layout_marginTop="24dp"
+                android:layout_toEndOf="@+id/time_start_hours_linear3"
+                android:text=":"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/time_start_hours_linear4"
+                android:layout_width="36dp"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:clickable="true"
+                android:layout_toEndOf="@+id/colon_end"
+                android:background="@drawable/edit_text_underline">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/time_end_min"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/no_border"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/end_session"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/time_pick_end"
+                android:layout_marginTop="24dp"
+                android:layout_toEndOf="@id/time_start_hours_linear4"
+                android:gravity="center"
+                android:text="AM"
+                android:textColor="@color/am"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/day_check"
+                android:layout_width="120dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:text="All Day"
+                android:textColor="@color/all_day"
+                android:textSize="16sp"
+                app:buttonTint="@color/white" />
+
+
+            <ImageView
+                android:id="@+id/locate_where"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/day_check"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:src="@drawable/locate_orange" />
+
+            <TextView
+                android:id="@+id/where_happen"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_below="@id/day_check"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_toEndOf="@id/locate_where"
+                android:gravity="center"
+                android:text="Where is it happening?"
+                android:textColor="@color/start_it"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/locate_edit"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/listPreferredItemHeight"
+                android:layout_below="@+id/locate_where"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="12dp"
+                android:drawableEnd="@drawable/gps"
+                android:enabled="true"
+                android:focusable="false"
+                android:maxLines="2"
+                android:padding="@dimen/margin_4"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:backgroundTint="@color/line_edit" />
+
+
+            <ImageView
+                android:id="@+id/person_invite"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/locate_edit"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/person_orange" />
+
+            <TextView
+                android:id="@+id/invite"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_below="@id/locate_edit"
+                android:layout_marginStart="@dimen/margin_4"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/person_invite"
+                android:gravity="bottom"
+                android:text="Event Type"
+                android:textColor="@color/start_it"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/open_close"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_below="@id/locate_edit"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/invite"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Open Event"
+                    android:textColor="@color/open_event"
+                    android:textSize="14sp"
+                    app:buttonTint="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Close Event"
+                    android:textColor="@color/open_event"
+                    android:textSize="14sp"
+                    app:buttonTint="@color/white" />
+
+            </RadioGroup>
+
+
+            <!--
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/open"
+                android:layout_width="124dp"
+                android:layout_height="24dp"
+                android:layout_below="@id/locate_edit"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/invite"
+                android:text="Open Event"
+                android:textColor="@color/open_event"
+                android:textSize="14sp"
+                app:buttonTint="@color/white" />
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/close"
+                android:layout_width="124dp"
+                android:layout_height="24dp"
+                android:layout_below="@id/locate_edit"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/open"
+                android:text="Close Event"
+                android:textColor="@color/open_event"
+                android:textSize="14sp"
+                app:buttonTint="@color/white" />-->
+
+            <!-- <ImageView
+                 android:id="@+id/person_mentee_or_mentor"
+                 android:layout_width="20dp"
+                 android:layout_height="20dp"
+                 android:layout_below="@id/person_invite"
+                 android:layout_marginStart="12dp"
+                 android:layout_marginTop="10dp"
+                 android:src="@drawable/person_orange" />
+             <TextView
+                 android:id="@+id/text"
+                 android:layout_width="72dp"
+                 android:layout_height="24dp"
+                 android:layout_below="@id/invite"
+                 android:layout_marginStart="@dimen/margin_4"
+                 android:layout_marginTop="8dp"
+                 android:layout_toEndOf="@+id/person_mentee_or_mentor"
+                 android:gravity="bottom"
+                 android:text="Your are ?"
+                 android:textColor="@color/start_it"
+                 android:textSize="16sp" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/open_close"
+                android:layout_marginTop="16dp">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/participant"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1.4"
+                    android:text="Participant"
+                    android:ellipsize="end"
+                    android:textColor="@color/open_event"
+                    android:textSize="14sp"
+                    app:buttonTint="@color/white" />
+
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/mentor"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1.2"
+                    android:text="Mentor"
+                    android:textColor="@color/open_event"
+                    android:textSize="14sp"
+                    app:buttonTint="@color/white" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/mentee"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1.2"
+                    android:text="Mentee"
+                    android:textColor="@color/open_event"
+                    android:textSize="14sp"
+                    app:buttonTint="@color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/contact_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:layout_marginEnd="52dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <com.conext.conext.ui.custom.HexagonMaskView
+                android:id="@+id/add_contact"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/hex_src_plus" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_4"
+    android:background="@color/white"
+    app:elevation="8dp">
+
+    <ImageView
+        android:id="@+id/alarm_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/topRelativeLayout"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_more_alarm_24dp" />
+
+    <TextView
+        android:id="@+id/event_time_notify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topRelativeLayout"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_toEndOf="@id/alarm_img"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/locate_image"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/alarm_img"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_8"
+        android:src="@drawable/ic_marker_24dp" />
+
+    <TextView
+        android:id="@+id/event_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alarm_img"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_toRightOf="@id/locate_image"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/event_place2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_place"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_toRightOf="@id/locate_image"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/upcome_events_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@id/event_place2"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <com.conext.conext.ui.custom.HexagonMaskView
+        android:id="@+id/hex_one_event"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/event_place2"
+        android:layout_margin="8dp"
+        android:src="@drawable/hex_src_plus_color"
+        android:visibility="gone" />
+    <!--<com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+        android:id="@+id/hex_one_event"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/event_place2"
+        android:layout_margin="8dp"
+        android:src="@drawable/hex_src_plus"
+        app:siBorderColor="@color/bg_card_selected"
+        app:siBorderWidth="8dp"
+        app:siShape="@drawable/white_hex_rotate"
+        app:siSquare="true" />-->
+    <!--
+    <cn.lankton.anyshape.AnyshapeImageView
+        android:id="@+id/hex_one_event"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/event_place"
+        android:layout_margin="8dp"
+        android:src="@drawable/hex_src_plus"
+        app:anyshapeMask="@drawable/rotate_hex_orange" />-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/upcome_events_recycler"
+        android:layout_marginTop="@dimen/margin_4"
+        android:background="@color/view_upcome" />
+
+    <LinearLayout
+        android:id="@+id/intrest"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/upcome_events_recycler"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/event_yes"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Yes"
+            android:textAllCaps="true"
+            android:textColor="@color/interst_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/event_interested"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/margin_4"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="Tentative"
+            android:textAllCaps="true"
+            android:textColor="@color/interst_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/event_no"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="No"
+            android:textAllCaps="true"
+            android:textColor="@color/interst_color"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/topRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/bac"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:elevation="4dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:id="@+id/event_name"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/event_date"
+            android:ellipsize="end"
+            android:paddingBottom="@dimen/margin_8"
+            android:layout_marginStart="8dp"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/event_type"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/event_name"
+            android:layout_below="@+id/event_date"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/margin_4"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/event_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/event_type"
+            android:gravity="end"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+
+        <TextView
+            android:id="@+id/event_month"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/event_date"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_toRightOf="@id/event_type"
+            android:gravity="end"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/event_more"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/event_month"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_more_vert_black_24dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

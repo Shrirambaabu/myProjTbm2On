@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/profile_mentoship"
+        android:title="Mentorship"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/profile_alumni"
+        android:title="Alumni Meet"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/profile_lunch"
+        android:title="Lunch Meetup"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/profile_coffee"
+        android:title="Coffee Connect"
+        app:showAsAction="never" />
+</menu>

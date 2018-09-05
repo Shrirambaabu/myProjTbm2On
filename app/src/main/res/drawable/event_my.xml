@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <size android:width="72dp" />
+        </shape>
+    </item>
+
+    <item
+        android:drawable="@drawable/my_eve"
+        android:gravity="center_vertical|left"
+        android:left="32dp" />
+
+</layer-list>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mentee_view">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card_selected"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/mSearch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:defaultQueryHint="Search all Contacts"
+            app:queryHint="Search all Contacts" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/skill_container_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/topLayout"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/bg_card_selected" />
+
+
+    <ImageView
+        android:id="@+id/skill_dots"
+        android:layout_width="28dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/topLayout"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/bg_card_selected"
+        android:padding="@dimen/margin_2"
+        android:src="@drawable/ic_more_vert_black_24dp" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/skill_container_scroll">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_mentors"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>
+

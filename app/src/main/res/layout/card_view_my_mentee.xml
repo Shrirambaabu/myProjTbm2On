@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rr"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="@dimen/margin_4"
+    android:background="@color/cement">
+
+    <com.conext.conext.ui.custom.HexagonMaskView
+        android:id="@+id/contact_image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+
+    <ImageView
+        android:id="@+id/tic_contact_selected"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/mentee_dp" />
+
+    <TextView
+        android:id="@+id/mentor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sasasasasasasasasasasasasasasasas"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:ellipsize="end"
+        android:layout_toEndOf="@id/contact_image"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/mentor_description"
+        android:layout_width="wrap_content"
+        android:text="dasasasasasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssss"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mentor_name"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_toEndOf="@+id/contact_image"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/mentor_des"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/mentee_in"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_below="@+id/mentor_description"
+        android:layout_toEndOf="@+id/contact_image"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:text="Mentee in:"
+        android:textColor="@color/mentor_in"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mentee_in_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mentor_description"
+        android:layout_marginStart="@dimen/margin_4"
+        android:minHeight="24dp"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:layout_marginBottom="@dimen/margin_4"
+        android:layout_toEndOf="@+id/mentee_in" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/mentee_in_recycler"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@android:color/black" />
+
+
+    <TextView
+        android:id="@+id/other_interest"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/view"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="@dimen/margin_4"
+        android:text="Other Interests:"
+        android:textColor="@color/mentor_in"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/other_skill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/other_interest"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:paddingStart="72dp"
+        android:textStyle="bold"
+        android:textColor="@color/describe_mentor"
+        android:textSize="16sp">
+
+    </TextView>
+
+</RelativeLayout>

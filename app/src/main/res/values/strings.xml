@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Conext</string>
+    <string name="facebook_app_id">176446096237389</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">135a3e953dcabaad94692b18c80d2772</string>
+
+    <string name="fb_login_protocol_scheme">fb176446096237389</string>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="login">Log In</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="email_id">Email Id</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mergers_aquisitions"><![CDATA[Mergers & Aquisitions]]></string>
+    <string name="add_skill">+ Add Skill</string>
+    <string name="business_strategy">Business Strategy</string>
+    <string name="product_development">Product Development</string>
+    <string name="network_view">Network View</string>
+    <string name="events">Events</string>
+    <string name="my_mentees">My Mentees</string>
+    <string name="my_mentors">My Mentors</string>
+    <string name="create_an_event">Create An Event</string>
+    <string name="create_a_mentorship_program">Create A Mentorship Program</string>
+    <string name="my_alumini">My Alumini</string>
+    <string name="openDrawer">openDrawer</string>
+    <string name="closeDrawer">closeDrawer</string>
+    <string name="meet_greet"><![CDATA[Meet & Greet]]></string>
+    <string name="coffee_connect">Coffee Connect</string>
+    <string name="desc_create_event"><i>Description (max 400 characters)</i></string>
+</resources>

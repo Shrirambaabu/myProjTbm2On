@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/net_img"
+        android:icon="@drawable/net_img"
+        android:title="Network"
+        android:checkable="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/event_switch"
+        android:icon="@drawable/ic_event_black_24dp"
+        android:title="Events"
+        android:checkable="true"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/notification_tool"
+        android:icon="@drawable/notification_image"
+        android:title="Notification"
+        android:checkable="true"
+        app:showAsAction="always" />
+
+</menu>

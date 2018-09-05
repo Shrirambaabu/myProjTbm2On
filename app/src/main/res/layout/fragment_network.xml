@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mentee_view">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/skill_container_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/topLayout"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/bg_card_selected" />
+
+    <ImageView
+        android:id="@+id/skill_dots"
+        android:layout_width="28dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/topLayout"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/bg_card_selected"
+        android:src="@drawable/ic_more_vert_black_24dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/skill_container_scroll"
+        android:background="@color/bg_card">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/recyclerView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginBottom="4dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+
+
+            <com.conext.conext.ui.custom.CustomRecyclerView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:items_count_in_row="4"
+                app:items_horizontal_spacing="0dp"
+                app:items_vertical_spacing="0dp"
+                app:orientation="vertical" />
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

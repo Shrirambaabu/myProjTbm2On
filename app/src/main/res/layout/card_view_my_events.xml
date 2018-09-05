@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_4"
+    android:background="@color/white"
+    app:elevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:elevation="8dp">
+
+        <ImageView
+            android:id="@+id/alarm_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_more_alarm_24dp" />
+
+        <TextView
+            android:id="@+id/event_my_time_notify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_toRightOf="@id/alarm_img"
+            android:ellipsize="marquee"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/locate_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/alarm_img"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_8"
+            android:src="@drawable/ic_marker_24dp" />
+
+        <TextView
+            android:id="@+id/event_my_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/alarm_img"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_toRightOf="@id/locate_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/event_my_place2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/event_my_place"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_toRightOf="@id/locate_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_events_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_below="@id/event_my_place2"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp">
+
+        </android.support.v7.widget.RecyclerView>
+        <!--
+                    <cn.lankton.anyshape.AnyshapeImageView
+                        android:id="@+id/hex_one_event_my"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/hex_src_plus"
+                        app:anyshapeMask="@drawable/rotate_hex_orange"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_alignBottom="@+id/my_events_recycler"
+                        android:layout_alignEnd="@+id/event_my_place" />-->
+        <com.conext.conext.ui.custom.HexagonMaskView
+            android:id="@+id/hex_one_event_my"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignBottom="@+id/my_events_recycler"
+            android:layout_alignEnd="@+id/event_my_place"
+            android:layout_margin="8dp"
+            android:src="@drawable/hex_src_plus_color"
+            android:visibility="gone" />
+
+        <!--<com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+            android:id="@+id/hex_one_event_my"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignBottom="@+id/my_events_recycler"
+            android:layout_alignEnd="@+id/event_my_place"
+            android:layout_margin="8dp"
+            android:src="@drawable/hex_src_plus"
+            app:siBorderColor="@color/bg_card_selected"
+            app:siShape="@drawable/white_hex_rotate"
+            app:siSquare="true" />-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/topRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/bac"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:elevation="4dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="#000000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:id="@+id/event_my_name"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/event_my_date"
+            android:layout_marginStart="@dimen/margin_8"
+            android:paddingBottom="@dimen/margin_8"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/event_my_type"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/event_my_date"
+            android:layout_alignStart="@+id/event_my_name"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/margin_4"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/event_my_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/event_my_type"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+
+        <TextView
+            android:id="@+id/event_my_month"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/event_my_date"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_toRightOf="@id/event_my_type"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/event_my_more"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/event_my_month"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_more_vert_black_24dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

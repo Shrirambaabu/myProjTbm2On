@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><!--<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="#000000" />
+
+    <stroke
+        android:width="2dp"
+        android:color="#ffffff" />
+
+    <corners
+        android:bottomLeftRadius="20dp"
+        android:bottomRightRadius="20dp"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp" />
+
+    <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+        android:src="@drawable/custom_dia_bg"/>
+
+</shape>-->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/custom_dia_bg" /><!--
+<item>
+    <shape android:shape="rectangle" android:padding="10dp">
+        <corners
+            android:bottomRightRadius="5dp"
+            android:bottomLeftRadius="5dp"
+            android:topLeftRadius="5dp"
+            android:topRightRadius="5dp"/>
+    </shape>
+</item>-->
+
+</layer-list>

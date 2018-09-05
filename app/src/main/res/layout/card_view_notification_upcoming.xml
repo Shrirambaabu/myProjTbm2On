@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/img_black_overlay"
+        android:layout_width="80dp"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/img_notify_upcome"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_8"
+            android:alpha=".7"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/notify_upcome_date_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/notify_upcome_month_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notify_upcome_date_one"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/notify_meet"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_toEndOf="@id/img_black_overlay"
+        android:maxLines="1"
+        android:textColor="@color/meet_notify"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/onwards_notify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notify_meet"
+        android:layout_toEndOf="@+id/img_black_overlay"
+        android:textColor="@color/noify_onwards"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/friends_notify"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/onwards_notify"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_toEndOf="@+id/img_black_overlay"
+        android:ellipsize="end"
+        android:textColor="@color/notification"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/notify_more"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_toEndOf="@+id/onwards_notify"
+        android:src="@drawable/ic_more_vert_black_24dp" />
+
+</RelativeLayout>
+
+

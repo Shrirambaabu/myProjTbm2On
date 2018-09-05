@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:clickable="false"
+    android:background="@null"
+    android:focusableInTouchMode="false"
+    android:layout_height="wrap_content">
+    <!--
+        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            app:siBorderColor="@color/black"
+            app:siBorderWidth="16dp"
+            app:siShape="@drawable/black_network_hex"
+            app:siSquare="true" />-->
+
+    <com.conext.conext.ui.custom.HexagonMaskView
+        android:id="@+id/profile_pic"
+        android:layout_width="96dp"
+        android:scaleType="centerCrop"
+        android:layout_height="96dp" />
+
+    <ImageView
+        android:id="@+id/mentor"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/profile_pic"
+        android:layout_alignEnd="@+id/profile_pic"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/mentor_info"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/mentee"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/mentor"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/mentee_dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/create"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:layout_alignTop="@+id/profile_pic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:padding="4dp"
+        android:text="Create"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/event"
+        android:layout_width="32dp"
+        android:layout_height="24dp"
+        android:layout_alignStart="@id/profile_pic"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:padding="@dimen/margin_2"
+        android:text="Event"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/event_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/profile_pic"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="36dp"
+        android:padding="@dimen/margin_2"
+        android:src="@drawable/icon_meeting"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/mentorship_text"
+        android:layout_width="32dp"
+        android:layout_height="24dp"
+        android:layout_alignEnd="@+id/profile_pic"
+        android:layout_below="@+id/mentorship_image"
+        android:layout_marginEnd="8dp"
+        android:maxLines="2"
+        android:text="Mentor-\nship"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/mentorship_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/mentor"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="36dp"
+        android:padding="@dimen/margin_2"
+        android:src="@drawable/icon_tie"
+        android:visibility="gone" />
+
+    <!-- <ProgressBar
+         style="@android:style/Widget.ProgressBar.Horizontal"
+         android:layout_alignParentEnd="true"
+         android:layout_marginTop="36dp"
+         android:layout_marginBottom="48dp"
+         android:layout_width="16dp"
+         android:layout_height="match_parent"
+         android:max="100"
+         android:progress="33"
+         android:progressDrawable="@drawable/progress_drawable" />-->
+
+</RelativeLayout>
